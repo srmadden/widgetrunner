@@ -1,0 +1,81 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+<html> <head>
+<title> WidgetRunner -- Dashboard Widgets on the MacOS Desktop </title>
+</head>
+
+<body>
+<table>
+  <td>
+    <td> <img width=100 src="runner.png"></img>
+      <td>
+<h1>WidgetRunner -- Run Dashboard Widgets on the MacOS Desktop</h1>
+
+</table>
+(Version 1.0 -- Released 1/31/2010)
+<p>
+
+This is a quick hack I put together to run MacOS Dashboard Widgets on your desktop, rather than having to separately enter the dashboard to view/manipulate them.  I find this to be a much more convenient way to run many widgets -- especially those that present information, such as the Weather widget.
+<p>
+Though there is an <a href="http://www.macosxhints.com/article.php?story=20050422172929402">undocumented hack</a> that allows you to run Widgets on the desktop, they always float above all other windows (including PowerPoint presentations!), which I found to be pretty annoying.  WidgetRunner allows you to specify whether each widget should float on top, act like a normal window, or be pinned to the destkop.
+<p>
+There are also commercial applications to do this, but I didn't feel it was worth $10+ for this feature Apple should have included for free, so I decided to write this bit of free software.
+
+<h2> Documentation </h2>
+
+You're looking at it!  Download and extract the program, and place it in your Applications folder.  Create a new widget by selecting "New Widget..." from the File menu.  Widgets are typically located in:
+
+<ul>
+  <li> /Library/Widgets/ <br> (In the open dialog, click on the name of your hard drive, then Library, then Widgets)
+  <li> /Users/username/Library/Widgets <br> (where username is your username)
+</ul>
+
+<p>
+
+
+To configure the level at widget a widget floats, or close a widget after you have opened it, right (or Ctrl) click on it and select one of the options.
+
+
+<p>
+
+Open widgets are automatically saved at exit and re-opened at launch.  You may have multiple instances (with different settings) of the same widget open.
+
+<p>
+
+You can cause WidgetRunner to open at startup by right (or Ctrl) clicking on its icon in the dock and selecting "Options>Open at Login".
+
+  
+
+<h2> Compatibility </h2>
+
+I have only tested WidgetRunner under MacOS 10.6 (Snow Leopard) on an Intel Mac.  I believe it should run under MacOS 10.5 as well.
+
+<p>
+WidgetRunner works with most of the Apple-supplied Widgets, including Weather, Google, Calculator, iTunes, etc.
+<p>
+WidgetRunner is not compatible with all Widgets.  In particular, it doesn't work properly with some widgets that define custom Javascript classes (such as FlightTracker), and sometimes has issues with not setting widget window frames properly (e.g., the Address Book widget). I've spent a bit of time trying to debug these issues, but eventually gave up.  If you are interested in helping fix these issues, feel free to email me and I'd be happy to describe what I know about them.
+
+
+
+<h2> Download </h2>
+
+Download it from <a href="widgetrunner.zip">here</a>.
+
+<h2> Source Code </h2>
+
+Source code for WidgetRunner is available as  GoogleCode project.  Follow instructions on
+<a href="http://code.google.com/p/widgetrunner/source/checkout">this page</a> to perform an anonymous svn checkout.
+If you would like to help with WidgetRunner development, feel free to submit your patches to me.
+
+<h2> Copyright Information </h2>
+
+WidgetRunner is Copyright 2010 Samuel Madden.  WidgetRunner is free for use, and is licensed under the MIT Open Source License.  
+
+<h2> Credits and Contact Info </h2>
+
+WidgetRunner was developed by <a href="http://db.csail.mit.edu/madden">Samuel Madden</a>.
+Please email me at madden@csail.mit.edu with questions or comments.
+
+<hr>
+<address></address>
+<!-- hhmts start --> Last modified: Fri Feb  5 18:12:49 EST 2010 <!-- hhmts end -->
+</body> </html>
