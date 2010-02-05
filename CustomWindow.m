@@ -240,7 +240,6 @@ http://developer.apple.com/mac/library/samplecode/RoundTransparentWindow/listing
                 
                 [theMenu addItem:item];
                 [theMenu insertItemWithTitle:@"Close Widget" action:@selector(closeWidget:) keyEquivalent:@"" atIndex:0];
-//                [theMenu insertItemWithTitle:@"Honk" action:@selector(honk:) keyEquivalent:@"" atIndex:1];
              
                 [NSMenu popUpContextMenu:theMenu withEvent:event forView:[self contentView]];
              
