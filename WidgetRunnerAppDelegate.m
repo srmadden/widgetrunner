@@ -1,4 +1,4 @@
-/* Copyright (c) 2010 Samuel R Madden (madden@csai.mit.edu)
+/* Copyright (c) 2010 Samuel R Madden (madden@csail.mit.edu)
  
  Permission is hereby granted, free of charge, to any person obtaining a copy
  of this software and associated documentation files (the "Software"), to deal
