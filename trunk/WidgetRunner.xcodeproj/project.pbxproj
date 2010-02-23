@@ -237,7 +237,9 @@
 				GCC_PREFIX_HEADER = WidgetRunner_Prefix.pch;
 				INFOPLIST_FILE = "WidgetRunner-Info.plist";
 				INSTALL_PATH = "$(HOME)/Applications";
+				MACOSX_DEPLOYMENT_TARGET = 10.5;
 				PRODUCT_NAME = WidgetRunner;
+				SDKROOT = macosx10.5;
 			};
 			name = Debug;
 		};
@@ -252,6 +254,7 @@
 				INFOPLIST_FILE = "WidgetRunner-Info.plist";
 				INSTALL_PATH = "$(HOME)/Applications";
 				PRODUCT_NAME = WidgetRunner;
+				SDKROOT = macosx10.5;
 			};
 			name = Release;
 		};
