@@ -274,6 +274,12 @@ http://developer.apple.com/mac/library/samplecode/RoundTransparentWindow/listing
             }
 
             break;
+      /*  case NSKeyUp: {
+            NSString *js = [NSString stringWithFormat:@"e = {}; e.charCode = %d; alert(e.charCode); document.keyReleased(e);", [event keyCode]];
+            [webview stringByEvaluatingJavaScriptFromString:js];
+        }
+            break;
+       */
         default:
             [super sendEvent:event];
 

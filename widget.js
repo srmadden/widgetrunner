@@ -35,9 +35,20 @@ function Menu() {
     }
 }
 
+function Calculator() {
+    this.evaluateExpression = function(expr, unknown) {
+        if (expr == "decimal_string")
+            return ".";
+        else if (expr == "thousands_separator")
+            return ",";
+        else
+            return eval(expr);
+    }
+}
 
 function Widget () {
 
+    this.calculator = new Calculator();
     
     this.identifier = 	"widget";
     
@@ -144,7 +155,6 @@ resizeTo = function(width,height) {
 
 
 }
-
 
 
 function setKeys(keys) {
