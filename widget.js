@@ -108,7 +108,10 @@ function Widget () {
         for (var val in vals) {
             var pair = vals[val].split(":");
             alert(vals[val]);
-            
+            if (pair[1] == 'true')
+                pair[1] = true;
+            if (pair[1] == 'false')
+                pair[1] = false;
             this.map[pair[0]] = pair[1];
         }
     }
