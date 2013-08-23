@@ -117,7 +117,7 @@ http://developer.apple.com/mac/library/samplecode/RoundTransparentWindow/listing
 
 //load a widget into the window from a specified file
 -(void)loadWidget:(NSString *)fileName {
-    NSString *plistFile = [NSString stringWithFormat:@"%@/%@",fileName,@"info.plist"];
+    NSString *plistFile = [NSString stringWithFormat:@"%@/%@",fileName,@"Info.plist"];
     NSData *plistData = [NSData dataWithContentsOfFile:plistFile];
     if (plistData != NULL) {
         NSString *err;
@@ -316,6 +316,7 @@ http://developer.apple.com/mac/library/samplecode/RoundTransparentWindow/listing
     NSLog(@"Move to %f,%f",aPoint.x,aPoint.y);
     [super setFrameOrigin:aPoint];
 }
+
 
 
 
