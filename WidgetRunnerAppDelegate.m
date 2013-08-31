@@ -52,7 +52,12 @@
             
             int x = [(NSNumber *)[settings objectAtIndex:3] intValue];
             int y = [(NSNumber *)[settings objectAtIndex:4] intValue];
-            [win setFrameOrigin:NSMakePoint(x,y)];
+            win->org_x = x;
+            win->org_y = y;
+            NSLog(@"X = %d, Y=%d",x,y);
+            [win performSelector:@selector(moveToSavedLoc) withObject:nil afterDelay:1.0];
+            
+            // [win setFrameOrigin:NSMakePoint(x,y)];
             
             NSImage *myImage = [[NSImage alloc ]initWithContentsOfFile:[settings objectAtIndex:0]];
             [NSApp setApplicationIconImage: myImage];
