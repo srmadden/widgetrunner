@@ -38,9 +38,9 @@ CustomWindow.h -- CustomWindow defines a widget window with no title bar and wit
     bool didInit;
     NSString *key;
     NSString *widgetFile;
-    
 @public
     CustomWebView *webview;
+    float org_x, org_y;
     id parent;
 
 }
@@ -57,6 +57,7 @@ CustomWindow.h -- CustomWindow defines a widget window with no title bar and wit
 - (NSString *)getKey;
 - (NSString *)getFile;
 -(NSString *)getSettingsString;
+-(void)moveToSavedLoc;
 
 @property (assign) IBOutlet CustomWebView *webview;
 
