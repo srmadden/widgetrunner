@@ -131,13 +131,18 @@ http://developer.apple.com/mac/library/samplecode/RoundTransparentWindow/listing
             
             //check to see if the widget plist specifies a plugin to load
             NSString *plugin = [dict objectForKey:@"Plugin"];
+            NSString *bundleName = [dict objectForKey:@"CFBundleName"];
+
+            if (plugin == NULL) { //check for default plugin name
+                plugin = [NSString stringWithFormat:@"%@.plugin",bundleName];
+            }
             if (plugin != NULL) {              // if it does, load it
                 NSString *pluginfile = [NSString stringWithFormat:@"%@/%@",fileName,plugin];
                 NSBundle *myBundle = [NSBundle bundleWithPath:pluginfile];
                 
                 Class exampleClass;
                 id<Widget> newInstance;
-                if (exampleClass = [myBundle principalClass])
+                if ((exampleClass = [myBundle principalClass]))
                 {
                     newInstance = [[exampleClass alloc] initWithWebView:webview];
                     [newInstance windowScriptObjectAvailable:[webview windowScriptObject]];
@@ -318,6 +323,12 @@ http://developer.apple.com/mac/library/samplecode/RoundTransparentWindow/listing
 }
 
 
+-(void)moveToSavedLoc {
+    NSLog(@"Deferred move to %f,%f",org_x,org_y);
+
+    NSPoint p = NSMakePoint(org_x, org_y);
+    [super setFrameOrigin:p];
+}
 
 
 
